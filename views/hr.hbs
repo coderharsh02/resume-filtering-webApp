@@ -1,0 +1,47 @@
+<div class="input-group rounded:" id="searchDiv">
+    <form id="searchForm" action="/hrmanager/search" method="get">
+        <input type="search" class="form-control rounded" id="searchBar" placeholder="Search for particular skill"
+            name="skill" />
+
+        <div class="col-md-12" id="searchBtn">
+            <button class="btn btn-primary" type="submit" style="width: 100%;">Search</button>
+        </div>
+    </form>
+    </span>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>ApplicantID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role Applied For</th>
+                        <th>Skills</th>
+                        <th>Resume Download Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each data.reqArr}}
+                    <tr>
+                        <td>{{_id}}</td>
+                        <td>{{name}}</td>
+                        <td>{{email}}</td>
+                        <td>{{roleAppliedFor}}</td>
+                        <td>{{skills}}</td>
+                        <td> <a href="https://resume-filtering-web.herokuapp.com/{{resume}}">view</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{#unless data.reqArr}}
+    <div class="col-md-12 text-center">
+        <h2>No Data Found</h2>
+    </div>
+    {{/unless}}
+</div>

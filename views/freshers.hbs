@@ -1,0 +1,27 @@
+<form class="row g-3" action="https://resume-filtering-web.herokuapp.com/api/applicant/store" method="post" enctype="multipart/form-data">
+
+    <div class="col-md-4">
+        <label for="validationFullName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="validationFullName" name="name" value="" required>
+    </div>
+
+    <div class="col-md-4">
+        <label for="validationEmail" class="form-label">Email</label>
+        <input type="text" class="form-control" id="validationEmail" name="email" value="" required>
+    </div>
+
+    <div class="col-md-4">
+        <label for="validationRoleAppliedFor" class="form-label">Applying for the role of</label>
+        <input type="text" class="form-control" id="validationRoleAppliedFor" name="roleAppliedFor" value="" required>
+    </div>
+
+    <div class="col-md-12">
+        <label for="validationFile" class="form-label">Upload Your Resume</label>
+        <input type="file" class="form-control" id="validationFile" name="resume" aria-label="file example" required>
+    </div>
+
+    <div class="col-md-12">
+        <button class="btn btn-primary" type="submit" id="submitBtn">Submit Form</button>
+    </div>
+
+</form>
